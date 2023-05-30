@@ -1,6 +1,5 @@
 # Readme Generator
-
-## Description
+ ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 This simple application uses inquirer to generate a custom readme for the user.
 
