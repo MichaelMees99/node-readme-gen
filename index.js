@@ -2,6 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
+// array of questions for use in markdown generation
 const questions = [
   {
     type: 'input',
@@ -21,7 +23,7 @@ const questions = [
   {
     type: 'input',
     name: 'usage',
-    message: 'Describe how you use this project?',
+    message: 'Describe how to use this project?',
   },
   {
     type: 'list',
@@ -57,6 +59,7 @@ function writeToFile(fileName, data) {
   );
 }
 
+// this function starts the the questionnaire 
 function init() {
   inquirer.prompt(questions).then((answers) => {
     writeToFile('README.md', generateMarkdown(answers));
